@@ -1,0 +1,47 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"C_Cpp.default.includePath": [
+            "${workspaceFolder}",
+			"${workspaceFolder}/src/source",
+			"${workspaceFolder}/src/include"
+		],
+		"files.exclude": {
+            ".git": true,
+            "**/*.a": true,
+            "**/*.bak": true,
+            "**/*.cmd": true,
+            "**/*.o": true,
+            "**/*.so": true,
+            "**/*.so.*": true,
+            "**/*.su": true,
+            "**/*.tmp": true,
+            "**/*.gz": true,
+            "**/*.tar": true,
+            "**/*.zip": true,
+            "**/*.bin": true,
+            "**/*.img": true,
+            "**/.*yyyy": true,
+            "**/.built*": true,
+            "**/.prepare*": true,
+            "**/*.map": true,
+            "**/*.lds": true,
+            "**/*.yml": true,
+            "**/*.gitkeep": true,
+			"build": true,
+            "install": true,
+            "ipkg-install": true,
+            "ipkg-ipq": true
+		},
+		"files.associations": {
+			"*.vue": "html",
+			"busybox.h": "c",
+			"libbb.h": "c",
+			"*.tcc": "c"
+		},
+	}
+}
