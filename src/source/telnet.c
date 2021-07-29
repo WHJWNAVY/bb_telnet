@@ -593,8 +593,20 @@ static void cookmode(void) {
 }
 
 static void bb_show_usage(void) {
-    printf("Usage: telnet HOST [PORT]\r\n");
-    printf("Connect to telnet server\r\n");
+
+#if ENABLE_FEATURE_TELNET_AUTOLOGIN
+#define telnet_trivial_usage "[-a] [-l USER] HOST [PORT]"
+#define telnet_full_usage                          \
+    "\n\nConnect to telnet server\n"               \
+    "\n	-a  Automatic   login with $USER variable" \
+    "\n	-l  USER        Automatic login as USER"
+#else
+#define telnet_trivial_usage "HOST [PORT]"
+#define telnet_full_usage "\n\nConnect to telnet server"
+#endif
+
+    printf("Usage: telnet %s", telnet_trivial_usage);
+    printf("%s\r\n", telnet_full_usage);
     doexit(EXIT_FAILURE);
 }
 
